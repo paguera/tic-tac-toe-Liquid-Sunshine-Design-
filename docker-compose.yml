@@ -1,0 +1,11 @@
+services:
+  morpion:
+    build: .
+    ports:
+      - "8081:80"
+    restart: always
+    volumes:
+      - .:/var/www/html
+    environment:
+      - APACHE_RUN_USER=www-data
+      - APACHE_RUN_GROUP=www-data
